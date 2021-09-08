@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import java.awt.*;
 
@@ -62,5 +62,9 @@ public class CC {
 
     public static String customHighlightedText(Color text, Color highlight) {
         return String.format("\033[38;2;%1s;%1s;%1s;48;2;%1s;%1s;%1sm", text.getRed(), text.getGreen(), text.getBlue(), highlight.getRed(), highlight.getGreen(), highlight.getBlue());
+    }
+
+    public static void println(String text, String colour) {
+        System.out.println(colour + text + CC.RESET);
     }
 }

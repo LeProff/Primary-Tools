@@ -1,4 +1,4 @@
-package Utils.json;
+package utils.json;
 
 import com.google.gson.JsonObject;
 

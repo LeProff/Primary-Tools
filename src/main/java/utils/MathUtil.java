@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,6 +43,20 @@ public class MathUtil {
             }
         }
         return !flag;
+    }
+
+    /**
+     * Finds all possible whole number division for the given value.
+     *
+     * @param value the given number to test
+     * @return      all divisors of the value excluding 1 and value
+     */
+    public static ArrayList<Integer> getDivisors(int value) {
+        ArrayList<Integer> divisors = new ArrayList<>();
+        for (int i = 2; i <= (value / 2) + 1; i++) {
+            if (value % i == 0) divisors.add(i);
+        }
+        return divisors;
     }
 
     /**
