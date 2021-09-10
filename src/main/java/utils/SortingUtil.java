@@ -1,18 +1,19 @@
 package utils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SortingUtil {
 
     // Bubble Sort
-    public static void bubbleSortInt(ArrayList<Integer> nums) {
-        int len = nums.size();
+    public static void bubbleSortInt(ArrayList<Integer> arr) {
+        int len = arr.size();
         for (int i = 0; i < len - 1; i++ ) {
             for (int j = 0; j < len - i - 1; j++) {
-                if (nums.get(j) > nums.get(j + 1)) {
-                    int temp = nums.get(j);
-                    nums.set(j, nums.get(j + 1));
-                    nums.set(j + 1, temp);
+                if (arr.get(j) > arr.get(j + 1)) {
+                    int temp = arr.get(j);
+                    arr.set(j, arr.get(j + 1));
+                    arr.set(j + 1, temp);
                 }
             }
         }
@@ -40,6 +41,47 @@ public class SortingUtil {
                     }
                 }
             }
+        }
+    }
+
+    // Quick Sort
+    public static void quickSortInt(ArrayList<Integer> arr, int start, int end) {
+        int i = start;
+        int j = end - 1;
+        if (j - i >= 1) {
+            int pivot = arr.get(i);
+            while (j > i) {
+                while (arr.get(i).compareTo(pivot) <= 0 && 1 <= end && j > i) {
+                    i++;
+                }
+                while (arr.get(j).compareTo(pivot) >= 0 && j >= start && j >= i) {
+                    j--;
+                }
+                if (j > i) Collections.swap(arr, i, j);
+            }
+            Collections.swap(arr, start, j);
+            quickSortInt(arr, start, j - 1);
+            quickSortInt(arr, j + 1, end);
+        }
+    }
+
+    public static void quickSortString(ArrayList<String> arr, int start, int end) {
+        int i = start;
+        int j = end;
+        if (j - i >= 1) {
+            String pivot = arr.get(i);
+            while (j > i) {
+                while (arr.get(i).compareTo(pivot) <= 0 && i <= end && j > i) {
+                    i++;
+                }
+                while (arr.get(j).compareTo(pivot) >= 0 && j >= start && j >= i) {
+                    j--;
+                }
+                if (j > i) Collections.swap(arr, i, j);
+            }
+            Collections.swap(arr, start, j);
+            quickSortString(arr, start, j - 1);
+            quickSortString(arr, j + 1, end);
         }
     }
 }
