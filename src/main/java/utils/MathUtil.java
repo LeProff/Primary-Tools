@@ -36,6 +36,7 @@ public class MathUtil {
      */
     public static boolean isPrime(int value) {
         boolean flag = false;
+        if (value == 1) return false;
         for (int i = 2; i <= value / 2; i++) {
             if (value % i == 0) {
                 flag = true;
@@ -43,20 +44,6 @@ public class MathUtil {
             }
         }
         return !flag;
-    }
-
-    /**
-     * Finds all possible whole number division for the given value.
-     *
-     * @param value the given number to test
-     * @return      all divisors of the value excluding 1 and value
-     */
-    public static ArrayList<Integer> getDivisors(int value) {
-        ArrayList<Integer> divisors = new ArrayList<>();
-        for (int i = 2; i <= (value / 2) + 1; i++) {
-            if (value % i == 0) divisors.add(i);
-        }
-        return divisors;
     }
 
     /**
@@ -72,6 +59,20 @@ public class MathUtil {
             if (isPrime(i)) nums.add(i);
         }
         return nums;
+    }
+
+    /**
+     * Finds all possible whole number division for the given value.
+     *
+     * @param value the given number to test
+     * @return      all divisors of the value excluding 1 and value
+     */
+    public static ArrayList<Integer> getDivisors(int value) {
+        ArrayList<Integer> divisors = new ArrayList<>();
+        for (int i = 2; i <= (value / 2) + 1; i++) {
+            if (value % i == 0) divisors.add(i);
+        }
+        return divisors;
     }
 
     /**
@@ -163,5 +164,23 @@ public class MathUtil {
         }
         if (maxCount > 1) return  mode;
         return 0;
+    }
+
+    public static long factorial(int number) {
+        long result = 1;
+
+        for (int factor = 2; factor <= number; factor++) {
+            result *= factor;
+        }
+
+        return result;
+    }
+
+    public static long permute(int n, int x) {
+        return factorial(n) / factorial(n - x);
+    }
+
+    public static long choose(int n, int x) {
+        return (factorial(n)) / (factorial(n - x) * factorial(x));
     }
 }

@@ -49,19 +49,20 @@ public class CC {
     }
 
     public static String customHighlight(int r, int g, int b) {
-        return String.format("\033[48;2;%1s;%1s;%1sm", r, g, b);
+        return String.format("\033[48;2;%1s;%1s;%1sm" + CC.RESET, r, g, b);
     }
 
     public static String customHighlight(Color c) {
-        return String.format("\033[48;2;%1s;%1s;%1sm", c.getRed(), c.getGreen(), c.getBlue());
+        return String.format("\033[48;2;%1s;%1s;%1sm" + CC.RESET, c.getRed(), c.getGreen(), c.getBlue());
     }
 
     public static String customHighlightedText(int red1, int green1, int blue1, int red2, int green2, int blue2) {
-        return String.format("\033[38;2;%1s;%1s;%1s;48;2;%1s;%1s;%1sm", red1, green1, blue1, red2, green2, blue2);
+        return String.format("\033[38;2;%1s;%1s;%1s;48;2;%1s;%1s;%1sm" + CC.RESET, red1, green1, blue1, red2, green2, blue2);
     }
 
     public static String customHighlightedText(Color text, Color highlight) {
-        return String.format("\033[38;2;%1s;%1s;%1s;48;2;%1s;%1s;%1sm", text.getRed(), text.getGreen(), text.getBlue(), highlight.getRed(), highlight.getGreen(), highlight.getBlue());
+        return String.format("\033[38;2;%1s;%1s;%1s;48;2;%1s;%1s;%1sm" + CC.RESET,
+                text.getRed(), text.getGreen(), text.getBlue(), highlight.getRed(), highlight.getGreen(), highlight.getBlue());
     }
 
     public static void println(String text, String colour) {
