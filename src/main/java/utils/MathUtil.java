@@ -167,13 +167,8 @@ public class MathUtil {
     }
 
     public static long factorial(int number) {
-        long result = 1;
-
-        for (int factor = 2; factor <= number; factor++) {
-            result *= factor;
-        }
-
-        return result;
+        if (number == 1) return 1;
+        else return number * factorial(number - 1);
     }
 
     public static long permute(int n, int x) {
