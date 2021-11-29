@@ -3,7 +3,6 @@ package utils;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 public class MathUtil {
 
     /**
@@ -26,6 +25,17 @@ public class MathUtil {
      */
     public static int random(int min, int max) {
         return (int) ((Math.random() * ((max + 1) - min)) + min);
+    }
+
+    public static ArrayList<Integer> randomNoRepetition(int min, int max, int count) {
+        ArrayList<Integer> used = new ArrayList<>();
+        while (used.size() < count) {
+            int num = MathUtil.random(min, max);
+            if (!used.contains(num)) {
+                used.add(num);
+            }
+        }
+        return used;
     }
 
     /**
@@ -164,6 +174,14 @@ public class MathUtil {
         }
         if (maxCount > 1) return  mode;
         return 0;
+    }
+
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+
+    public static boolean isOdd(int num) {
+        return num % 2 != 0;
     }
 
     public static long factorial(int number) {

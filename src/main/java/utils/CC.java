@@ -65,7 +65,7 @@ public class CC {
                 text.getRed(), text.getGreen(), text.getBlue(), highlight.getRed(), highlight.getGreen(), highlight.getBlue());
     }
 
-    public static void println(String text, String colour) {
+    public static void println(Object text, String colour) {
         System.out.println(colour + text + CC.RESET);
     }
 }

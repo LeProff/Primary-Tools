@@ -1,6 +1,15 @@
 package utils;
 
+import java.util.Optional;
+
 public class WritingUtil {
+
+    /**
+     * Prints a 100 character long divider.
+     */
+    public static void divider() {
+        System.out.println(repeatString("#", 100));
+    }
 
     /**
      * Repeats a given string a defined amount of times.

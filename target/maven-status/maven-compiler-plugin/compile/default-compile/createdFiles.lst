@@ -1,3 +1,4 @@
+utils/Debug.class
 Interfaces/Interfaces.class
 utils/ChartUtil.class
 utils/WritingUtil.class
@@ -12,8 +13,11 @@ Interfaces/geometry/ThreeDimensional.class
 objects/charts/PieChartData.class
 utils/json/JsonDeserializer.class
 utils/TimeUtil.class
+Example.class
 utils/json/JsonConversion.class
 utils/json/JsonChain.class
-objects/T.class
+objects/Objects.class
 utils/SystemUtil.class
+objects/Map2D.class
 utils/CC.class
+utils/json/JsonObjectBuilder.class

@@ -1,4 +1,4 @@
 package objects;
 
-public class Map2D {
+class Map2D {
 }

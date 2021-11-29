@@ -1,5 +1,5 @@
-/Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/objects/T.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/SortingUtil.java
+/Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/objects/Objects.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/json/JsonConversion.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/CC.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/TimeUtil.java
@@ -8,10 +8,13 @@
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/objects/charts/PieChartData.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/json/JsonSerializer.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/Interfaces/geometry/TwoDimensional.java
+/Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/objects/Map2D.java
+/Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/json/JsonObjectBuilder.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/ChartUtil.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/Interfaces/Interfaces.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/Interfaces/geometry/ThreeDimensional.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/SystemUtil.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/json/JsonChain.java
+/Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/Debug.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/utils/MathUtil.java
 /Users/loicpotvin/Desktop/Java/Primary Tools/src/main/java/Testing.java
